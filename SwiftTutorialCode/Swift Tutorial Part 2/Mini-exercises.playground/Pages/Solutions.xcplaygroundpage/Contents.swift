@@ -94,4 +94,5 @@ let (_, day, _, averageTemperature) = temperature2
 var temperature3 = (month: 10, day: 17, year: 2015, averageTemperature: 15.7)
 temperature3.averageTemperature = 21.2
 temperature3
+print(temperature3)
 

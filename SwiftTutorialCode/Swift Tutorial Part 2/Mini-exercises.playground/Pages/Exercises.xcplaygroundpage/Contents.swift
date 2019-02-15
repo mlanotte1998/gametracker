@@ -38,7 +38,7 @@ let age2 = Double(21)
  ### Question 2
  Create a constant called `avg1` and set it equal to the average of `age1` and `age2` using the naïve operation `(age1 + age2) / 2`. Use Option-click to check the type and check the result of `avg1`. Why is it wrong?
  */
-let avg1 = (age1 + age2) / 2
+let avg1 = Double(age1 + age2) / 2
 
 /*:
  ### Question 3
@@ -49,27 +49,32 @@ let avg1 = (age1 + age2) / 2
  ## Strings in Swift
  ### Question 1
  Create a string constant called `firstName` and initialize it to your first name. Also create a string constant called `lastName` and initialize it to your last name. */
-
+let firstName: String = "Mike"
 /*:
  ### Question 2
  Create a string constant called `fullName` by adding the `firstName` and `lastName` constants together, separated by a space.
  */
-
+let fullName: String = firstName + "Lanotte"
 /*:
  ### Question 3
  Using interpolation, create a string constant called `myDetails` that uses the `fullName` constant to create a string introducing yourself. For example, my string would read: `"Hello, my name is Lorenzo Boaro."`.
  */
-
+let myDetails: String = "Hello, my name is \(fullName)!"
 /*:
  ### Question 4
  Using interpolation and multi-line string literals, create a string constant called `myLongDetails` that uses the `fullName` constant to create a long string introducing yourself. For example, my string would read: `"Hello my name is Lorenzo Boaro\nand I'm learning how to use\nmulti-line string literals."`.
  */
+let myLongDetails: String = """
+    \(myDetails)
+    and I'm learning how to use
+    multi-line string literals.
+    """
 
 /*:
  ## Tuples
  ### Question 1
  Declare a constant tuple that contains three `Int` values followed by a `Double`. Use this to represent a date (month, day, year) followed by an average temperature for that date. */
-
+let today = (month: 9, day: 24, year: 1998, averageTemperature: 78.6)
 /*:
  ### Question 2
  Change the tuple to name the constituent components. Give them names related to the data that they contain: `month`, `day`, `year` and `averageTemperature`.
